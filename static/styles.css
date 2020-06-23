@@ -1,0 +1,30 @@
+body {
+  background-color: #f7ffe6;
+  text-align:center;
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+}
+
+table {
+    border: 1px;
+    width: 800px;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 250%;
+}
+
+.header-tr {
+    background-color: #dcd3bd;
+    text-align: center;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+.body-tr {
+    background-color: #dbd4dc;
+    text-align: center;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 12px;
+}

@@ -1,0 +1,36 @@
+{% comment %}this html renders the data fetched from db
+by calling the "index" method in views.py {%endcomment%}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href = {% static "styles.css" %}>
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Data Task</h1>
+<table>
+<tr class="header-tr">
+    <td>ID</td>
+    <td>Timestamp</td>
+    <td>Temperature</td>
+    <td>Duration</td>
+</tr>
+
+{% for row in data %}
+<tr class="body-tr">
+    <td>{{ row.id }}</td>
+    <td>{{ row.timestamp }}</td>
+    <td>{{ row.temperature }}</td>
+    <td>{{ row.duration }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
