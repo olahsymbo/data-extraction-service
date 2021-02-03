@@ -1,6 +1,6 @@
 ## DataTask application 
 
-This django web application is for uploading data in ".csv" format to a postgresql database and serving the data from the DB in an html.
+This django web application is developed for uploading data in ".csv" format to a postgresql database and serving (rendering) the data from the DB in an html.
 
 ### Getting Started
 
