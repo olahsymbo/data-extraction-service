@@ -1,3 +1,5 @@
+[![DataTask](https://github.com/olahsymbo/DataTask/actions/workflows/datatask-ci.yml/badge.svg)](https://github.com/olahsymbo/DataTask/actions/workflows/datatask-ci.yml)
+
 ## DataTask application 
 
 This django web application is developed for uploading data in ".csv" format to a postgresql database and serving (rendering) the data from the DB in an html.
