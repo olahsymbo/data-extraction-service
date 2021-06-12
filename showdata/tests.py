@@ -4,7 +4,7 @@ from django.utils import timezone
 from .models import Taskdata
 
 
-class DataTaskTest(TestCase):
+class DataTest(TestCase):
     def setUp(self):
         self.entry = Taskdata.objects.create(
             timestamp=timezone.now().strftime("%Y-%m-%d"),
