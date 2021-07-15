@@ -12,7 +12,6 @@ logger = logging.getLogger(__name__)
 class showtask(generics.ListAPIView):
 
     """
-
     create a view to handle requests and return a response.
     in this view, we have "retrieve" method, whhich accepts a GET
     request and response with proper response message and data.
