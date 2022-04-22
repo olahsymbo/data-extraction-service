@@ -2,7 +2,7 @@ appdirs==1.4.4
 asgiref==3.3.4
 cfgv==3.3.0
 distlib==0.3.2
-Django==3.2
+Django==3.2.13
 djangorestframework==3.11.0
 filelock==3.0.12
 flake8==3.9.2
