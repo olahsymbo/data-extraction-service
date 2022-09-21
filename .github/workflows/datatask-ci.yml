@@ -42,17 +42,20 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-#      - name: Coverage report
-#        run: |
-#          pip install coverage
-#          coverage run manage.py test showdata
-#          coverage report
-#      - name: Django Testing
-#        run: python3 manage.py test showdata
+          pip install pipenv
+          pipenv install
+          pipenv shell
 
-#      - name: Archive code coverage results
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: code-coverage-report
-#          path: DataTask/htmlcov/report.html
+      - name: Coverage report
+        run: |
+          pip install coverage
+          coverage run manage.py test showdata
+          coverage report
+      - name: Django Testing
+        run: python3 manage.py test showdata
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: DataTask/htmlcov/report.html
