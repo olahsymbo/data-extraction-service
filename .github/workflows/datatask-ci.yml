@@ -54,7 +54,7 @@ jobs:
       - name: Django Testing
         run: python3 manage.py test showdata
 
-      - name: Archive code coverage results
+      - name: Archive codes coverage results
         uses: actions/upload-artifact@v2
         with:
           name: code-coverage-report
