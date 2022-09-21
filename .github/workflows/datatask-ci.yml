@@ -44,7 +44,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv shell
-          pipenv install
+          pipenv run
 
       - name: Coverage report
         run: |
