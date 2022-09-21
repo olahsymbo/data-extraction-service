@@ -11,7 +11,7 @@ class Taskdata(models.Model):
     class Meta:
         db_table = 'taskdata'
 
-    id = models.IntegerField(primary_key=True)
+    # id = models.IntegerField(primary_key=True)
 
     timestamp = models.DateTimeField()
 
