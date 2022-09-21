@@ -3380,3 +3380,12 @@
 (0.004) INSERT INTO "taskdata" ("id", "timestamp", "temperature", "duration") VALUES (96234, '2019-07-09T11:31:10.548198+00:00'::timestamptz, '1551.4133321786408', '0 days 00:34:56.389283463'); args=(96234, datetime.datetime(2019, 7, 9, 11, 31, 10, 548198, tzinfo=<UTC>), '1551.4133321786408', '0 days 00:34:56.389283463')
 (0.002) INSERT INTO "taskdata" ("id", "timestamp", "temperature", "duration") VALUES (96234, '2019-07-09T11:31:10.548198+00:00'::timestamptz, '1551.4133321786408', '0 days 00:34:56.389283463'); args=(96234, datetime.datetime(2019, 7, 9, 11, 31, 10, 548198, tzinfo=<UTC>), '1551.4133321786408', '0 days 00:34:56.389283463')
 (0.043) INSERT INTO "taskdata" ("id", "timestamp", "temperature", "duration") VALUES (96234, '2019-07-09T11:31:10.548198+00:00'::timestamptz, '1551.4133321786408', '0 days 00:34:56.389283463'); args=(96234, datetime.datetime(2019, 7, 9, 11, 31, 10, 548198, tzinfo=<UTC>), '1551.4133321786408', '0 days 00:34:56.389283463')
+(0.027)
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
