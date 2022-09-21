@@ -1,4 +1,4 @@
-name: DataTask
+name: data-extraction-service
 
 on:
   push:

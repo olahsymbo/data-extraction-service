@@ -18,8 +18,8 @@ project_home = main_dir
 
 sys.path.append(project_home)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "DataTask.settings")  # get django setting properties
-os.environ['DJANGO_SETTINGS_MODULE'] = 'DataTask.settings'
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "data-extraction-service.settings")  # get django setting properties
+os.environ['DJANGO_SETTINGS_MODULE'] = 'data-extraction-service.settings'
 
 from django.core.wsgi import get_wsgi_application  # noqa: E402
 application = get_wsgi_application()  # get the django web application server.

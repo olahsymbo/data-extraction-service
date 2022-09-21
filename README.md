@@ -1,4 +1,4 @@
-[![DataTask](https://github.com/olahsymbo/DataTask/actions/workflows/datatask-ci.yml/badge.svg)](https://github.com/olahsymbo/DataTask/actions/workflows/datatask-ci.yml)
+[![data-extraction-service](https://github.com/olahsymbo/DataTask/actions/workflows/datatask-ci.yml/badge.svg)](https://github.com/olahsymbo/DataTask/actions/workflows/datatask-ci.yml)
 
 ## Data Extraction Service
 
@@ -6,9 +6,13 @@ This django web application is developed for uploading data in ".csv" format to 
 
 ### Getting Started
 
-To enable this app function properly, install the dependencies in the requirements.txt. Simply run:
+To enable this app function properly, install the dependencies in the `pipenv`. Simply run:
 
-`pip3 install -r requirements.txt`
+```
+pipenv shell
+pipenv install
+```
+
 
 Once all the dependencies have been installed, proceed as follows:
 
@@ -60,43 +64,35 @@ By completing the first step, we have created a db `task`. The next step is uplo
 
 In order to upload the data, we need to create a db table which will be accessed by our django project model, we need to:
 
-- Create db table
-
-    Go to the project directory
-
-    `cd DataTask`
-
-    in the project directory, activate the virtual environment:
-
-    `source datataskenv/bin/activate`
+- Create db table 
 
     create db table `Taskdata` in the db `task` by running the following:
 
-    `python3 upload_data/create_db_table.py`
+    `python upload_data/create_db_table.py`
 
 - Upload csv data to db table
 
     start the web server using:
 
-    `python3 manage.py runserver`
+    `python manage.py runserver`
 
     open another terminal and goto project directory
 
-    `cd DataTask`
+    `cd data-extraction-service`
 
     to upload the `task.csv` data into table `Taskdata`, run:
 
-    `python3 upload_data/stack_data.py`
+    `python upload_data/stack_data.py`
 
     we can now turn off the web application server (Ctrl + C)
 
-### Launch DataTask server
+### Launch data-extraction-service server
 
-The main app in DataTask is `showdata`. It contains the data model, views, and url routes
+The main app in `data-extraction-service` is `showdata`. It contains the data model, views, and url routes
 
 - Again launch the server using:
 
-    `python3 manage.py runserver`
+    `python manage.py runserver`
 
 - to view the uploaded data in html, go to:
 
@@ -105,9 +101,10 @@ The main app in DataTask is `showdata`. It contains the data model, views, and u
 - to access the admin page, go to:
 
     `http://127.0.0.1:8000/admin/`
+  
+The admin page login details is:
 
-    The admin page login details is:
-
-    username: admin
-
-    password: user1234
+```
+username: admin
+password: user1234
+```
