@@ -65,3 +65,4 @@ task\README
 .gitsecret/keys/random_seed
 !*.secret
 .env
+requirements.txt
