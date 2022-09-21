@@ -48,16 +48,16 @@ jobs:
           pip3 install pipenv
           pipenv install --system --deploy --ignore-pipfile
 
-      - name: Coverage report
-        run: |
-          pip install coverage
-          coverage run manage.py test showdata
-          coverage report
-      - name: Django Testing
-        run: python3 manage.py test showdata
-
-      - name: Archive codes coverage results
-        uses: actions/upload-artifact@v2
-        with:
-          name: code-coverage-report
-          path: DataTask/htmlcov/report.html
+#      - name: Coverage report
+#        run: |
+#          pip install coverage
+#          coverage run manage.py test showdata
+#          coverage report
+#      - name: Django Testing
+#        run: python3 manage.py test showdata
+#
+#      - name: Archive codes coverage results
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: code-coverage-report
+#          path: DataTask/htmlcov/report.html
